@@ -24,9 +24,10 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Recreate Android Files Only
+      - name: Generate Fresh Android Project
         run: |
-          flutter create . --project-name=p2p_chat_app --platforms=android
+          flutter create . --project-name=p2p_chat_app --overwrite
+          git checkout lib/main.dart
 
       - name: Get Dependencies
         run: flutter pub get
