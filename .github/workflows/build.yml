@@ -24,10 +24,6 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Generate Missing Android Project Structure
-        run: |
-          flutter create . --project-name=p2p_chat_app --org=com.p2pchat.app --template=app --overwrite
-
       - name: Get Dependencies
         run: flutter pub get
 
